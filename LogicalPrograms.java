@@ -12,6 +12,7 @@ public class LogicalPrograms {
         logicalPrograms.fibonacciSeries(n);
         logicalPrograms.perfectNumber(n);
         logicalPrograms.primeNumber(n);
+        logicalPrograms.reverseNumber(n);
     }
 
     // Program For Fibonacci Series
@@ -62,4 +63,15 @@ public class LogicalPrograms {
         else
             System.out.println(n + " is Not Prime Number");
     }
+
+    // Program For reverse number
+    public void reverseNumber (int n) {
+        int a = 0;
+        for (int i = 0; n > 0; i++) {
+            a = (a + n % 10) * 10;
+            n = n / 10;
+        }
+        System.out.println("Reverse Of Given Number is: " + (a / 10));
+    }
+
 }
