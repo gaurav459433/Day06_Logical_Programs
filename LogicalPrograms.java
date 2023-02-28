@@ -11,6 +11,7 @@ public class LogicalPrograms {
         int n = sc.nextInt();
         logicalPrograms.fibonacciSeries(n);
         logicalPrograms.perfectNumber(n);
+        logicalPrograms.primeNumber(n);
     }
 
     // Program For Fibonacci Series
@@ -42,5 +43,23 @@ public class LogicalPrograms {
                 System.out.println(n + " " + "is Not A Perfect Number");
             }
         }
+    }
+
+
+    // Program For Prime Number
+    public void primeNumber(int n) {
+        int i = 1, cf = 0;
+        do {
+            if (n % i == 0) //It means i is the factor of n
+                cf++;
+            if (cf > 2)
+                break;
+            i++;
+        }
+        while (i <= n);
+        if (cf == 2)
+            System.out.println(n + " is A Prime Number");
+        else
+            System.out.println(n + " is Not Prime Number");
     }
 }
